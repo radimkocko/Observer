@@ -1,13 +1,14 @@
-YoutubeChannel channel =
-    new YoutubeChannel("Programování jednoduše");
+public class Subscriber : IObserver
+{
+    public string Name { get; }
 
-Subscriber petr = new Subscriber("Petr");
-Subscriber jana = new Subscriber("Jana");
-Subscriber tomas = new Subscriber("Tomáš");
+    public Subscriber(string name)
+    {
+        Name = name;
+    }
 
-channel.Subscribe(petr);
-channel.Subscribe(jana);
-channel.Subscribe(tomas);
-
-channel.UploadVideo("Návrhový vzor Observer");
-
+    public void Update(string message)
+    {
+        Console.WriteLine($"{Name}: {message}");
+    }
+}

@@ -33,4 +33,3 @@ public class YoutubeChannel
         Notify($"Kanál {ChannelName} vydal nové video: {title}");
     }
 }
-
